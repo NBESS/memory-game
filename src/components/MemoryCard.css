@@ -1,0 +1,21 @@
+.MoneyCard-Container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+.MoneyCard {
+    display: flex;
+    width: 150px;
+    height: 80px;
+    margin: 3px;
+    border-radius: 5px;
+    border: 3px solid #193d49;
+    background: repeating-radial-gradient(circle,#16a7a2,#16a7a2 15px, #2a3f3e 15px,#2a3f3e 35px);
+    justify-content: center;
+    box-shadow: 2px 2px 4px 0px black;
+}
+
+img {
+    width: 60px;
+    padding-top: 11px;
+}

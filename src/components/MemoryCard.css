@@ -1,22 +1,48 @@
-.MoneyCard-Container {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    margin-top: 20px;
-}
-.MoneyCard {
-    display: flex;
+.MemoryCard {
+    display: inline-block;
     width: 150px;
     height: 80px;
-    margin: 3px;
+    margin: 20px 5px 5px;
+    cursor: pointer;
+    position: relative;
+    perspective: 800px;
     border-radius: 5px;
     border: 3px solid #193d49;
+}
+
+.MemoryCard.inner {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+.MemoryCard_front, 
+.MemoryCard_back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+
+}
+
+.MemoryCard_front {
+    font-size: 30px;
+    padding-top: 20px;
+    transform: rotateY(180deg);
+}
+.MemoryCard_back {
     background: repeating-radial-gradient(circle,#16a7a2,#16a7a2 15px, #2a3f3e 15px,#2a3f3e 35px);
-    justify-content: center;
-    box-shadow: 2px 2px 4px 0px black;
 }
 
 img {
     width: 60px;
     padding-top: 11px;
 }
+
+.MemoryCard_inner.flipped {
+    transform: rotateY(180deg);
+}
+

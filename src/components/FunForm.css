@@ -1,0 +1,49 @@
+.meterContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.FunForm {
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+
+}
+
+.funMeter {
+    display: flex;
+    height: 125px;
+    justify-content: center;
+    padding: 10px;
+}
+
+input {
+    height: 30px;
+    width: 50px;
+    text-align: center ;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 30px;
+    margin-left: 1px; 
+}
+
+button {
+    width: 15px;
+    height: 15px;
+    border-style: none;
+    border-radius: 2px;
+}
+
+.increment-button > button {
+    color: green;
+}
+
+.decrement-button > button   {
+    color: red;
+}

@@ -8,28 +8,20 @@ class MemoryCard extends Component {
     }
     render() {
         let innerClass = "MemoryCard_inner";
-        if (this.state.isFlipped) {
+        if (this.props.isFlipped) {
             innerClass = innerClass + " flipped";
         }
         return (
-            <div className="MemoryCard" onClick={this.clickHandler}>
+            <div className="MemoryCard" onClick={this.props.pickCard}>
                 <div className={innerClass}>
                     <div className="MemoryCard_back">
                         <img src="https://www.digitalcrafts.com/img/logo-wrench-white.png" title='digitalcrafts-logo' alt='digitalcrafts-logo' />
                     </div>
-                    <div className="MemoryCard_front">∆</div>
+                    <div className="MemoryCard_front">{this.props.symbol}</div>
                 </div>
             </div>
         )
     }
-
-    clickHandler = () => {
-        this.setState({ 
-            isFlipped: !this.state.isFlipped 
-        });
-
-    }
-
 }
 
 export default MemoryCard;

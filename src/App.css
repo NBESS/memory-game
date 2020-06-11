@@ -49,3 +49,18 @@ h2{
   margin: 0;
 }
 
+.button {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+}
+
+button {
+  width: 150px;
+  background-color: #282c34;
+  color: azure;
+}
+
+span {
+  margin-bottom: 20px;
+}
